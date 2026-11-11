@@ -1,0 +1,205 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #222;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+header h1 {
+    color: #253858;
+    font-size: 32px;
+}
+
+header p {
+    color: #777;
+    margin: 8px 0 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+button {
+    border: none;
+    padding: 11px 17px;
+    background: #e5eaf2;
+    color: #253858;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.tab.active,
+.buttons button:first-child,
+#setAlarm {
+    background: #253858;
+    color: white;
+}
+
+.section {
+    display: none;
+    padding: 20px 5px;
+}
+
+.section.active {
+    display: block;
+}
+
+.section h2 {
+    margin-bottom: 25px;
+    color: #253858;
+}
+
+.clock-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: #253858;
+    color: white;
+    padding: 30px 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#time {
+    font-size: clamp(38px, 9vw, 55px);
+    font-weight: bold;
+}
+
+#period {
+    font-size: 20px;
+}
+
+#day {
+    margin-bottom: 8px;
+}
+
+#date {
+    color: #777;
+}
+
+.display {
+    font-size: clamp(30px, 8vw, 45px);
+    font-weight: bold;
+    color: #253858;
+    margin: 30px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.timer-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.timer-inputs input {
+    width: 75px;
+    padding: 12px 5px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.alarm-input {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.alarm-input input,
+.alarm-input select {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+li {
+    background: #eef2f7;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+li button {
+    background: #d9534f;
+    color: white;
+}
+
+#ringingBox {
+    background: #fff0e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#ringingBox h2 {
+    color: #c0392b;
+}
+
+footer {
+    margin-top: 30px;
+    color: #888;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 18px 12px;
+    }
+
+    nav button {
+        padding: 10px 12px;
+    }
+
+    .timer-inputs input {
+        width: 65px;
+    }
+}

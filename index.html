@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Clock App</h1>
+            <p>Your time, your control.</p>
+        </header>
+
+        <nav>
+            <button class="tab active" data-section="clock">Clock</button>
+            <button class="tab" data-section="stopwatch">Stopwatch</button>
+            <button class="tab" data-section="timer">Timer</button>
+            <button class="tab" data-section="alarm">Alarm</button>
+        </nav>
+
+        
+        <section id="clock" class="section active">
+            <h2>Digital Clock</h2>
+
+            <div class="clock-box">
+                <div id="time">00:00:00</div>
+                <div id="period">AM</div>
+            </div>
+
+            <h3 id="day">Monday</h3>
+            <p id="date">01 January 2026</p>
+        </section>
+
+       
+        <section id="stopwatch" class="section">
+            <h2>Stopwatch</h2>
+
+            <div class="display" id="stopwatchDisplay">
+                00:00:00.00
+            </div>
+
+            <div class="buttons">
+                <button id="startWatch">Start</button>
+                <button id="pauseWatch">Pause</button>
+                <button id="resetWatch">Reset</button>
+                <button id="lapWatch">Lap</button>
+            </div>
+
+            <h3>Lap Records</h3>
+            <ul id="lapList"></ul>
+        </section>
+
+       
+        <section id="timer" class="section">
+            <h2>Countdown Timer</h2>
+
+            <div class="timer-inputs">
+                <input type="number" id="hours" placeholder="HH" min="0" max="99">
+                <span>:</span>
+                <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+                <span>:</span>
+                <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+            </div>
+
+            <div class="display" id="timerDisplay">00:00:00</div>
+
+            <div class="buttons">
+                <button id="startTimer">Start</button>
+                <button id="pauseTimer">Pause</button>
+                <button id="resetTimer">Reset</button>
+            </div>
+        </section>
+
+       
+        <section id="alarm" class="section">
+            <h2>Set Alarm</h2>
+
+            <div class="alarm-input">
+                <input type="time" id="alarmTime">
+
+                <select id="ringtone">
+                    <option value="classic">Classic</option>
+                    <option value="beep">Digital Beep</option>
+                    <option value="bell">Bell</option>
+                </select>
+
+                <button id="setAlarm">Set Alarm</button>
+            </div>
+
+            <h3>Active Alarms</h3>
+            <ul id="alarmList"></ul>
+
+            <div id="ringingBox" hidden>
+                <h2>Alarm is ringing!</h2>
+                <button id="stopAlarm">Stop</button>
+                <button id="snoozeAlarm">Snooze 5 Minutes</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Clock App | All Rights Reserved</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
